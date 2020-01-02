@@ -7,11 +7,18 @@ There may be additions from time to time in order to make installation easier on
 ## Installing on MacOs
 **Requires MacOS Version Lower then Catalina (10.15) as the drop of support on 32bit applications makes the game unsupported.**
 
+Run this code in terminal to start the install
+```sh
+curl -S "https://gitlab.com/levi506/installing-insurgnece/blob/master/assets/macOS/install.sh" | bash
+```
+
 This installer is based on a shell script forked from [The Unofficial Urainum on MacOS installer](https://github.com/microbug/pokemon-uranium-on-macos) by [microbug](https://github.com/microbug) on github
 
 The general flow of the installation process is installing homebrew for ease of package management then installing [XQuartz](https://www.xquartz.org), [Wine on the Staging Branch](https://www.winehq.org), and [Winetricks](https://github.com/Winetricks/winetricks). This group of software allows the creation of a configured wine directory for specifically running the RPG Maker Games on MacOS. The full specs for how it is configured is available on microbug's original repo as I \[Levi506\] do not own a mac, but have at least a passing understanding from Linux and other unix based bash terminals. This script's addition is the factor of acquiring the game from the website and unzipping it to where it needs to be and installing fonts for ease of use.
 
 There are more details on what the script is doing on microbug's repo however he is a general breakdown for those worried about harming their macs.
+
+
 
 ### What this script is doing
 The First Task is creating the directory pkmn_insurg in your home folder if this fails the install script will fail to run. This will generally only happen on subsequent runs.
