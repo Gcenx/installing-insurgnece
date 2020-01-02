@@ -82,4 +82,4 @@ unzip Pokemon_Insurgence.zip -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 rm -rf Pokemon_Insurgence.zip
 
 write_bold "Done!"
-write_red_bold "Wait for all Wine configuration to finish (wait for any remaining windows to close), then REBOOT and check the guide on GitHub for next steps"
+write_red_bold "Wait for all Wine configuration to finish (wait for any remaining windows to close), then REBOOT and check the guide on the Pokemon Insurgence Forums for next steps"
