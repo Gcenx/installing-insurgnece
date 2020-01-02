@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-brew update
-brew upgrade
 
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 cd "$SCRIPTPATH"
