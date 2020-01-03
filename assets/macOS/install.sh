@@ -77,7 +77,7 @@ rm -rf $(brew --cache)
 
 print_step 10
 write_bold "Installing Insurg"
-curl -O "https://p-insurgence.com/releases/1.2.5/Pokemon%20Insurgence%201.2.5%20Core.zip"
+curl -O "https://www.p-insurgence.com/releases/1.2.5/Pokemon%20Insurgence%201.2.5%20Core.zip"
 unzip "Pokemon Insurgence 1.2.5 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 rm -rf "Pokemon Insurgence 1.2.5 Core.zip"
 
