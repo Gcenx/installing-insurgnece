@@ -66,9 +66,9 @@ sleep 5  # Let Wine finish spewing logs
 
 print_step 8
 write_bold "Adding game start script"
-curl -s -o "$HOME/pkmn_insurg/Run Pokémon Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
-chmod +x "$HOME/pkmn_insurg/Run Pokémon Insurgence.command"
-ln -s "$HOME/pkmn_insurg/Run Pokémon Insurgence.command" "$HOME/Desktop/Run Pokémon Insurgence.command"
+curl -s -o "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
+chmod +x "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
+ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pokémon-Insurgence.command"
 
 print_step 9
 write_bold "Clearing caches"
