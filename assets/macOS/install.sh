@@ -20,6 +20,14 @@ if [ -d "$HOME/pkmn_insurg" ]; then
     exit 1
 fi
 
+if [[ $SHELL == *"zsh" ]] ;
+then
+    write_red_bold "Error: You appear to be on MacOS Catalina or later. In this release, Apple has discontinued support for 32 bit applications, and as such Pokémon Insurgence will not be able to run."
+    write_bold "(if you are on an older version than Catalina and upgraded your shell to ZSH, run export SHELL='' before running the install command.)"
+    exit 1
+fi
+
+
 print_step 1
 if [ -x "$(command -v brew)" ]; then
     write_bold "Homebrew is already installed! Good for you, Homebrew is awesome."
