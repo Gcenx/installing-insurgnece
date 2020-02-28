@@ -43,3 +43,4 @@ The Ninth is clearing caches for that sweet ram
 
 The Tenth is installing the game to the wine directory in order to be able to launch the game with the command and then removes the zip download from the website
     *Note: If the website is down this task will fail.*
+    *Note 2: It is also known to fail a bit randomly so you may need to download the Windows Core and Extract the folder inside to ~/pkmn_insurg/drive_c/Program Files (x86)/*
