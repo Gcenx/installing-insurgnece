@@ -52,8 +52,8 @@ write_bold "Installing XQuartz"
 brew cask install xquartz
 
 print_step 5
-write_bold "Installing Wine Staging"
-brew cask install wine-staging
+write_bold "Installing Wine Stable"
+brew cask install wine-stable
 
 print_step 6
 write_bold "Installing Winetricks"
