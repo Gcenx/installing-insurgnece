@@ -19,7 +19,7 @@ if [ -x "$(command -v brew)" ]; then
 else
     write_bold "Homebrew not installed, installing now"
     write_red_bold "Accept all prompts and provide your password when it's asked for"
-    HOMEBREW_INSTALL_SCRIPT=$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install) || exit 1
+    HOMEBREW_INSTALL_SCRIPT=$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh) || exit 1
     /usr/bin/ruby -e "$HOMEBREW_INSTALL_SCRIPT"
     brew analytics off
 fi
