@@ -71,7 +71,7 @@ export WINEPREFIX=~/pkmn_insurg
 cd $WINEPREFIX || exit
 wineboot
 wineserver -w  # Wait for process to finish before continuing
-winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz
+winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz wmp9
 sleep 5  # Let Wine finish spewing logs
 
 print_step 8
