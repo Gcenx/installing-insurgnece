@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Error when any command fails. Prevents incomplete installs.
+set -e
+
 write_red_bold () {
     printf "\\033[00;31m\\033[1m%s\\033[0m\\n" "$1"
 }
@@ -33,7 +36,7 @@ if [ -x "$(command -v brew)" ]; then
     write_bold "Homebrew is already installed! Good for you, Homebrew is awesome."
 else
     write_bold "Homebrew not installed, installing now"
-    write_red_bold "Accept all prompts and provide your password when it's asked for"
+    write_red_bold "Accept all prompts and provide your password when it's asked for. Note that no password will be shown while typing."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew analytics off
 fi
@@ -68,7 +71,7 @@ export WINEPREFIX=~/pkmn_insurg
 cd $WINEPREFIX || exit
 wineboot
 wineserver -w  # Wait for process to finish before continuing
-winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz
+winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz wmp9
 sleep 5  # Let Wine finish spewing logs
 
 print_step 8
