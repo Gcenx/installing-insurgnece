@@ -75,6 +75,7 @@ write_bold "Lots of Wine logs (may look like nonsense) coming up..."
 export PATH=$PATH:"/Applications/Wine Staging.app/Contents/Resources/wine/bin/"
 mkdir ~/pkmn_insurg
 export WINEPREFIX=~/pkmn_insurg
+export WINEARCH=win32
 cd $WINEPREFIX || exit
 wineboot
 wineserver -w  # Wait for process to finish before continuing
