@@ -25,7 +25,7 @@ if [ -d "$HOME/pkmn_insurg" ]; then
         case $yn in
             [Yy]* ) echo "Deleting existing game files."; rm -rf "$HOME/pkmn_insurg"; break;;
             [Nn]* ) exit 1;;
-            * ) echo "Please answer yes or no.";;
+            * ) echo "Please answer [y]es or [n]o.";;
         esac
     done
 fi
