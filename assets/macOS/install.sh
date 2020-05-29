@@ -95,9 +95,10 @@ rm -rf $(brew --cache)
 
 print_step 10
 write_bold "Installing Insurg"
-curl -O "https://www.p-insurgence.com/releases/1.2.5/Pokemon Insurgence 1.2.5 Core.zip"
-unzip "Pokemon Insurgence 1.2.5 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
-mv -f "Pokemon Insurgence 1.2.5 Core.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
+curl -O "https://p-insurgence.com/releases/1.2.6/Pokemon Insurgence 1.2.6 Core.zip"
+unzip "Pokemon Insurgence 1.2.6 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
+mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.6 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
+mv -f "Pokemon Insurgence 1.2.6 Core.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 
 write_bold "Done!"
 write_red_bold "Wait for all Wine configuration to finish (wait for any remaining windows to close), then REBOOT and check the guide on the Pokemon Insurgence Forums for next steps"

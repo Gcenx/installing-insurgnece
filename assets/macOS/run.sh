@@ -9,7 +9,7 @@ export WINEPREFIX="$SCRIPTPATH"
 
 # By default we'd prefer the use of the primary wine path.
 WINEPATH="wine"
-GAMEPATH="$(pwd)/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core/Game.exe"
+GAMEPATH="$(pwd)/drive_c/Program Files (x86)/Pokemon Insurgence/Game.exe"
 # If the main wine path couldn't be found.
 if [ ! -x "$(command -v wine)" ]; then
     # Attempt to resolve the full wine path
