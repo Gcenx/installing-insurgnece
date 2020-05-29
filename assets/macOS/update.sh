@@ -20,6 +20,16 @@ then
     exit 1
 fi
 
+if [ ! -d "$HOME/pkmn_insurg" ]; then
+    echo "The game directory not found. Please use the install script instead."
+    exit 1
+fi
+
+if [ ! -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" ]; then
+    echo "Version 1.2.5 install not found. Please use the install script instead."
+    exit 1
+fi
+
 print_step 1
 write_bold "Updating Dir"
 mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
