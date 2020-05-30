@@ -46,3 +46,5 @@ write_bold "Updating Insurg"
 curl -O "https://p-insurgence.com/releases/1.2.6/Pokemon Insurgence 1.2.6 Patch.zip"
 unzip -u "Pokemon Insurgence 1.2.6 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.6 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
+
+echo "1.2.6" > "$HOME/pkmn_insurg/version"
