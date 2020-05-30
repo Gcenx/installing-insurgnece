@@ -65,7 +65,7 @@ print_step 7
 write_bold "Creating virtual Windows installation at ~/pkmn_insurg"
 write_red_bold "Remember to accept all prompts to install Mono and/or Gecko, you may be asked several times"
 write_bold "Lots of Wine logs (may look like nonsense) coming up..."
-export PATH=$PATH:"/Applications/Wine Staging.app/Contents/Resources/wine/bin/"
+export PATH=$PATH:"/Applications/Wine Stable.app/Contents/Resources/wine/bin/"
 mkdir ~/pkmn_insurg
 export WINEPREFIX=~/pkmn_insurg
 export WINEARCH=win32
