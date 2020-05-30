@@ -48,3 +48,5 @@ unzip -u "Pokemon Insurgence 1.2.6 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Prog
 mv -f "Pokemon Insurgence 1.2.6 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 
 echo "1.2.6" > "$HOME/pkmn_insurg/version"
+
+write_bold "Finished updating to 1.2.6! You can now play the game by running the shortcut on your desktop." 
