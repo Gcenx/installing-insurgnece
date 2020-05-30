@@ -19,14 +19,8 @@ write_bold "Unofficial Pokémon Insurgence Wine Installation Tool"
 write_bold "Based on the Unofficial Pkmn Uranium Installer https://github.com/microbug/pokemon-uranium-on-macos"
 
 if [ -d "$HOME/pkmn_insurg" ]; then
-    write_red_bold "Error: ~/pkmn_insurg already exists."
-    write_bold "Do you want to delete the existing game files, and reinstall? [Yn] "
-    select yn in "Yes" "No"; do
-        case $yn in
-            Yes ) rm -rf "$HOME/pkmn_insurg" ; break;;
-            No ) exit;;
-        esac
-    done
+    write_red_bold "Error: ~/pkmn_insurg already exists. Deleting original game files first."
+    rm -rf "$HOME/pkmn_insurg"
 fi
 
 if [[ $SHELL == *"zsh" ]] ;
