@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Error when any command fails. Prevents incomplete installs.
+set -e
+
 write_red_bold () {
     printf "\\033[00;31m\\033[1m%s\\033[0m\\n" "$1"
 }
