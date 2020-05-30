@@ -20,12 +20,11 @@ write_bold "Based on the Unofficial Pkmn Uranium Installer https://github.com/mi
 
 if [ -d "$HOME/pkmn_insurg" ]; then
     write_red_bold "Error: ~/pkmn_insurg already exists."
-    while true; do
-        read -p "Do you want to delete the existing game files, and reinstall? [Yn] " yn
+    write_bold "Do you want to delete the existing game files, and reinstall? [Yn] "
+    select yn in "Yes" "No"; do
         case $yn in
-            [Yy]* ) echo "Deleting existing game files."; rm -rf "$HOME/pkmn_insurg"; break;;
-            [Nn]* ) exit 1;;
-            * ) echo "Please answer [y]es or [n]o.";;
+            Yes ) rm -rf "$HOME/pkmn_insurg" ; break;;
+            No ) exit;;
         esac
     done
 fi
