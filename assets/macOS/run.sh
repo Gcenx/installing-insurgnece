@@ -23,7 +23,10 @@ if [ ! -f "$GAMEPATH" ]; then
     exit 1
 fi
 
-
-$WINEPATH $GAMEPATH &
-exit
+if [[ $# -eq 1 && $1 == "tail" ]] ; then
+    $WINEPATH $GAMEPATH
+else
+    $WINEPATH $GAMEPATH &
+    exit
+fi
 
