@@ -24,9 +24,9 @@ if [ ! -f "$GAMEPATH" ]; then
 fi
 
 if [[ $# -eq 1 && $1 == "tail" ]] ; then
-    $WINEPATH $GAMEPATH
+    "$WINEPATH" "$GAMEPATH"
 else
-    $WINEPATH $GAMEPATH &
+    "$WINEPATH" "$GAMEPATH" &
     exit
 fi
 
