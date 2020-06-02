@@ -3,9 +3,7 @@
 # Exit on error
 set -e
 
-SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
-cd "$SCRIPTPATH"
-export WINEPREFIX="$SCRIPTPATH"
+export WINEPREFIX="$HOME/pkmn_insurg"
 
 # By default we'd prefer the use of the primary wine path.
 WINEPATH="wine"
@@ -25,7 +23,10 @@ if [ ! -f "$GAMEPATH" ]; then
     exit 1
 fi
 
-
-$WINEPATH $GAMEPATH &
-exit
+if [[ $# -eq 1 && $1 == "tail" ]] ; then
+    "$WINEPATH" "$GAMEPATH"
+else
+    "$WINEPATH" "$GAMEPATH" &
+    exit
+fi
 

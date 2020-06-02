@@ -19,15 +19,8 @@ write_bold "Unofficial Pokémon Insurgence Wine Installation Tool"
 write_bold "Based on the Unofficial Pkmn Uranium Installer https://github.com/microbug/pokemon-uranium-on-macos"
 
 if [ -d "$HOME/pkmn_insurg" ]; then
-    write_red_bold "Error: ~/pkmn_insurg already exists."
-    while true; do
-        read -p "Do you want to delete the existing game files, and reinstall? [Yn] " yn
-        case $yn in
-            [Yy]* ) echo "Deleting existing game files."; rm -rf "$HOME/pkmn_insurg"; break;;
-            [Nn]* ) exit 1;;
-            * ) echo "Please answer [y]es or [n]o.";;
-        esac
-    done
+    write_red_bold "Error: ~/pkmn_insurg already exists. Deleting original game files first."
+    rm -rf "$HOME/pkmn_insurg"
 fi
 
 if [[ $SHELL == *"zsh" ]] ;
@@ -72,14 +65,14 @@ print_step 7
 write_bold "Creating virtual Windows installation at ~/pkmn_insurg"
 write_red_bold "Remember to accept all prompts to install Mono and/or Gecko, you may be asked several times"
 write_bold "Lots of Wine logs (may look like nonsense) coming up..."
-export PATH=$PATH:"/Applications/Wine Staging.app/Contents/Resources/wine/bin/"
+export PATH=$PATH:"/Applications/Wine Stable.app/Contents/Resources/wine/bin/"
 mkdir ~/pkmn_insurg
 export WINEPREFIX=~/pkmn_insurg
 export WINEARCH=win32
 cd $WINEPREFIX || exit
 wineboot
 wineserver -w  # Wait for process to finish before continuing
-winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz wmp9
+winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz
 sleep 5  # Let Wine finish spewing logs
 
 print_step 8
@@ -99,6 +92,7 @@ curl -O "https://p-insurgence.com/releases/1.2.6/Pokemon Insurgence 1.2.6 Core.z
 unzip "Pokemon Insurgence 1.2.6 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.6 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.6 Core.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
+write_bold "Installing Insurgence. This might take some time while it's downloading the game. Please be patient."
 
 write_bold "Done!"
 write_red_bold "Wait for all Wine configuration to finish (wait for any remaining windows to close), then REBOOT and check the guide on the Pokemon Insurgence Forums for next steps"
