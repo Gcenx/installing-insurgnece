@@ -9,7 +9,7 @@ write_bold () {
 }
 
 print_step () {
-    printf "\\n\\033[31m\\033[1m##### OVERALL INSTALLATION STEP %s #####\\033[0m\\n" "$1"
+    printf "\\n\\033[31m\\033[1m##### OVERALL CLEANUP STEP %s #####\\033[0m\\n" "$1"
 }
 
 
@@ -34,3 +34,5 @@ brew cask uninstall wine-staging
 print_step 6
 write_bold "Removing Winetricks"
 brew uninstall winetricks
+
+write_bold "Done!"
