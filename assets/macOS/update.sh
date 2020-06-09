@@ -28,14 +28,16 @@ if [ ! -d "$HOME/pkmn_insurg" ]; then
     exit 1
 fi
 
-if [ ! -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" ]; then
-    echo "Version 1.2.5 install not found. Please use the install script instead."
-    exit 1
+if [ -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" ]; then
+    print_step 1
+    write_bold "Updating Dir"
+    mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 fi
 
-print_step 1
-write_bold "Updating Dir"
-mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.5 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
+if [ ! -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence" ]; then
+    echo "Install not found. Please use the install script instead."
+    exit 1
+fi
 
 print_step 2
 write_bold "Updating Run Script"
@@ -47,9 +49,9 @@ ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pok
 
 print_step 3
 write_bold "Updating Game Files."
-curl -O "https://p-insurgence.com/releases/1.2.6/Pokemon Insurgence 1.2.6 Patch.zip"
-unzip -u "Pokemon Insurgence 1.2.6 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
-mv -f "Pokemon Insurgence 1.2.6 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
+curl -O "https://p-insurgence.com/releases/1.2.6/Pokemon Insurgence 1.2.7 Patch.zip"
+unzip -u "Pokemon Insurgence 1.2.7 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
+mv -f "Pokemon Insurgence 1.2.7 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 
-echo "1.2.6" > "$HOME/pkmn_insurg/version"
-write_bold "Finished updating to 1.2.6! You can now play the game by running the shortcut on your desktop." 
+echo "1.2.7" > "$HOME/pkmn_insurg/version"
+write_bold "Finished updating to 1.2.7! You can now play the game by running the shortcut on your desktop." 
