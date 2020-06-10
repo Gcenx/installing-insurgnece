@@ -51,7 +51,7 @@ ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pok
 
 print_step 3
 write_bold "Updating Game Files."
-wget -qc "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Patch.zip"
+wget -c "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Patch.zip"
 unzip -uo "Pokemon Insurgence 1.2.7 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.7 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 

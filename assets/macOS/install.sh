@@ -93,7 +93,7 @@ rm -rf $(brew --cache)
 
 print_step 11
 write_bold "Installing Insurg"
-wget -qc "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Core.zip"
+wget -c "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Core.zip"
 unzip "Pokemon Insurgence 1.2.7 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.7 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.7 Core.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
