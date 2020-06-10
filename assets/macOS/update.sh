@@ -39,17 +39,19 @@ if [ ! -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence" ]; 
     exit 1
 fi
 
+brew install wget
+
 print_step 2
 write_bold "Updating Run Script"
 rm -f "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
-curl -s -o "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
+wget -qc0 "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
 chmod +x "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
 rm -f "$HOME/Desktop/Run-Pokémon-Insurgence.command"
 ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pokémon-Insurgence.command"
 
 print_step 3
 write_bold "Updating Game Files."
-curl -O "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Patch.zip"
+wget -qc "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Patch.zip"
 unzip -u "Pokemon Insurgence 1.2.7 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.7 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 

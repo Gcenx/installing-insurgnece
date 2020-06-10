@@ -63,6 +63,10 @@ write_bold "Installing Winetricks"
 brew install winetricks
 
 print_step 7
+write_bold "Installing wget"
+brew install wget
+
+print_step 8
 write_bold "Creating virtual Windows installation at ~/pkmn_insurg"
 write_red_bold "Remember to accept all prompts to install Mono and/or Gecko, you may be asked several times"
 write_bold "Lots of Wine logs (may look like nonsense) coming up..."
@@ -76,20 +80,20 @@ wineserver -w  # Wait for process to finish before continuing
 winetricks directplay directmusic dsound d3dx9_43 macdriver=x11 ddr=opengl win10 devenum dmsynth quartz
 sleep 5  # Let Wine finish spewing logs
 
-print_step 8
+print_step 9
 write_bold "Adding game start script"
-curl -s -o "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
+wget -qc0 "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
 chmod +x "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
 ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pokémon-Insurgence.command"
 
-print_step 9
+print_step 10
 write_bold "Clearing caches"
 rm -rf ~/.cache/wine ~/.cache/winetricks
 rm -rf $(brew --cache)
 
-print_step 10
+print_step 11
 write_bold "Installing Insurg"
-curl -O "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Core.zip"
+wget -qc "https://p-insurgence.com/releases/1.2.7/Pokemon Insurgence 1.2.7 Core.zip"
 unzip "Pokemon Insurgence 1.2.7 Core.zip" -d "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 mv -f "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence 1.2.7 Core" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/Pokemon Insurgence"
 mv -f "Pokemon Insurgence 1.2.7 Core.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
