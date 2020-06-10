@@ -44,7 +44,7 @@ brew install wget
 print_step 2
 write_bold "Updating Run Script"
 rm -f "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
-wget -qc0 "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
+wget -qcO "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/run.sh"
 chmod +x "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command"
 rm -f "$HOME/Desktop/Run-Pokémon-Insurgence.command"
 ln -s "$HOME/pkmn_insurg/Run-Pokémon-Insurgence.command" "$HOME/Desktop/Run-Pokémon-Insurgence.command"
