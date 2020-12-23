@@ -34,11 +34,11 @@ brew tap homebrew/cask-versions
 
 print_step 4
 write_bold "Installing XQuartz"
-brew cask install xquartz
+brew install --cask xquartz
 
 print_step 5
 write_bold "Installing Wine Stable"
-brew cask install wine-stable
+brew install --cask wine-stable
 
 print_step 6
 write_bold "Installing Winetricks"

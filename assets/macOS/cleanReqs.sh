@@ -23,13 +23,13 @@ brew tap homebrew/cask-versions
 
 print_step 4
 write_bold "Removing XQuartz"
-brew cask uninstall xquartz
+brew uninstall --cask xquartz
 
 print_step 5
 write_bold "Removing Wine installs"
-brew cask uninstall wine-stable
-brew cask uninstall wine-devel
-brew cask uninstall wine-staging
+brew uninstall --cask wine-stable
+brew uninstall --cask wine-devel
+brew uninstall --cask wine-staging
 
 print_step 6
 write_bold "Removing Winetricks"
