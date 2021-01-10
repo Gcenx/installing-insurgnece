@@ -49,7 +49,7 @@ brew install --cask xquartz
 
 print_step 5
 write_bold "Installing Wine Crossover"
-brew install --cask wine-crossover
+brew install --cask --no-quarantine wine-crossover
 
 print_step 6
 write_bold "Installing Winetricks"
