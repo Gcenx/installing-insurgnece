@@ -55,6 +55,9 @@ Name: "{app}\Pokemon Insurgence 1.2.7 Core"; Permissions: users-full;
 Filename: {tmp}\7za.exe; Parameters: "x ""{tmp}\download.zip"" -o""{app}\"" * -r -aoa"; Flags: runhidden runascurrentuser;
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent;
 
+[UninstallDelete]
+Type: filesandordirs; Name:"{app}\Pokemon Insurgence 1.2.7 Core";
+
 [Code]
 var DownloadPage: TDownloadWizardPage;
 
