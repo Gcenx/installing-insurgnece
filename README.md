@@ -9,7 +9,7 @@ There may be additions from time to time in order to make installation easier on
 
 Run this code in terminal to start the install
 ```sh
-curl -S "https://gitlab.com/levi506/installing-insurgnece/raw/master/assets/macOS/install.sh" | bash
+curl -S "https://gitlab.com/levi506/installing-insurgence/raw/master/assets/macOS/install.sh" | bash
 ```
 
 This installer is based on a shell script forked from [The Unofficial Urainum on MacOS installer](https://github.com/microbug/pokemon-uranium-on-macos) by [microbug](https://github.com/microbug) on github
