@@ -30,6 +30,7 @@ write_bold "Removing Wine installs"
 brew uninstall --cask wine-stable
 brew uninstall --cask wine-devel
 brew uninstall --cask wine-staging
+brew uninstall --cast wine-crossover
 
 print_step 6
 write_bold "Removing Winetricks"
