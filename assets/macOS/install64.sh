@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Error when any command fails. Prevents incomplete installs.
-set -e
+set -o pipefail -e
 
 write_red_bold () {
     printf "\\033[00;31m\\033[1m%s\\033[0m\\n" "$1"
@@ -14,6 +14,12 @@ write_bold () {
 print_step () {
     printf "\\n\\033[31m\\033[1m##### OVERALL INSTALLATION STEP %s #####\\033[0m\\n" "$1"
 }
+
+onerror(){ 
+    write_red_bold "Something went wrong while installing Insurgence.".
+}
+
+trap onerror ERR
 
 write_bold "Unofficial Pokémon Insurgence Wine Installation Tool"
 write_bold "Based on the Unofficial Pkmn Uranium Installer https://github.com/microbug/pokemon-uranium-on-macos"
