@@ -53,19 +53,19 @@ brew tap gcenx/wine
 
 print_step 4
 write_bold "Installing XQuartz"
-brew install --cask xquartz
+brew install --cask xquartz -q
 
 print_step 5
 write_bold "Installing Wine Crossover"
-brew install --cask --no-quarantine wine-crossover
+brew install --cask --no-quarantine wine-crossover -q
 
 print_step 6
 write_bold "Installing Winetricks"
-brew install winetricks
+brew install winetricks -q
 
 print_step 7
 write_bold "Installing wget"
-brew install wget
+brew install wget -q
 
 print_step 8
 write_bold "Creating virtual Windows installation at ~/pkmn_insurg"
