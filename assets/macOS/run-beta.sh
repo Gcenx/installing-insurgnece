@@ -5,6 +5,7 @@
 set -e
 
 export WINEPREFIX="$HOME/pkmn_insurg"
+export WINEARCH=win64
 
 # By default we'd prefer the use of the primary wine path.
 WINEPATH="wine"
