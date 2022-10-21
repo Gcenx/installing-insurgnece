@@ -36,7 +36,9 @@ if [ -x "$(command -v brew)" ]; then
 else
     write_bold "Homebrew not installed, installing now"
     write_red_bold "Accept all prompts and provide your password when it's asked for. Note that no password will be shown while typing."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # Ensure we have sudo access
+    sudo true
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew analytics off
 fi
 
