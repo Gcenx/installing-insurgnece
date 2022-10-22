@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Error when any command fails. Prevents incomplete installs.
 set -e
@@ -15,7 +15,7 @@ print_step () {
     printf "\\n\\033[31m\\033[1m##### OVERALL INSTALLATION STEP %s #####\\033[0m\\n" "$1"
 }
 
-write_bold "Unofficial Pokémon Insurgence Wine Installation Tool"
+write_bold "Unofficial Pokémon Insurgence wine Installation Tool"
 write_bold "Based on the Unofficial Pkmn Uranium Installer https://github.com/microbug/pokemon-uranium-on-macos"
 
 if [ -d "$HOME/pkmn_insurg" ]; then
@@ -48,7 +48,6 @@ brew install wget
 
 print_step 5
 write_bold "Creating virtual Windows installation at ~/pkmn_insurg"
-write_bold "Lots of Wine logs (may look like nonsense) coming up..."
 mkdir ~/pkmn_insurg
 export WINEPREFIX=~/pkmn_insurg
 export WINEARCH=win32
