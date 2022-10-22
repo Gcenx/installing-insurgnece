@@ -39,8 +39,13 @@ write_bold "Updating Homebrew"
 brew update
 
 print_step 3
-write_bold "Installing Wine Stable"
-brew install --cask wine-stable
+if [[ ${OSTYPE:6} -gt 18 ]]; then
+    write_bold "Installing Wine Crossover"
+    brew install --cask gcenx/wine/wine-crossover
+else
+    write_bold "Installing Wine Stable"
+    brew install --cask wine-stable
+fi
 
 print_step 4
 write_bold "Installing wget"
