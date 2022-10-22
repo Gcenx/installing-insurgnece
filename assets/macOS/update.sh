@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Error when any command fails. Prevents incomplete installs.
 set -e
@@ -48,4 +48,4 @@ unzip -uo "Pokemon Insurgence 1.2.7 Patch.zip" -d "$HOME/pkmn_insurg/drive_c/Pro
 mv -f "Pokemon Insurgence 1.2.7 Patch.zip" "$HOME/pkmn_insurg/drive_c/Program Files (x86)/"
 
 echo "1.2.7" > "$HOME/pkmn_insurg/version"
-write_bold "Finished updating to 1.2.7! You can now play the game by running the shortcut on your desktop." 
+write_bold "Finished updating to 1.2.7! You can now play the game by running the shortcut on your desktop."
