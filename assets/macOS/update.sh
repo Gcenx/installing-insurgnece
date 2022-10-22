@@ -15,14 +15,6 @@ print_step () {
     printf "\\n\\033[31m\\033[1m##### OVERALL INSTALLATION STEP %s #####\\033[0m\\n" "$1"
 }
 
-
-if [[ $SHELL == *"zsh" ]] ;
-then
-    write_red_bold "Error: You appear to be on MacOS Catalina or later. In this release, Apple has discontinued support for 32 bit applications, and as such Pokémon Insurgence will not be able to run."
-    write_bold "(if you are on an older version than Catalina and upgraded your shell to ZSH, run export SHELL='' before running the install command.)"
-    exit 1
-fi
-
 if [ ! -d "$HOME/pkmn_insurg" ]; then
     echo "The game directory not found. Please use the install script instead."
     exit 1
